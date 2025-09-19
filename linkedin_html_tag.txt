@@ -1,0 +1,36 @@
+Author Name:
+Selector: '#ember53 > div > div > div.fie-impression-container > div.relative > div.ETBGexMshuEwohaBOFXsxiHXSPHkiGStzQc.display-flex.align-items-flex-start > div > div > a > span.update-components-actor__title > span.gVPtsMTFJDvxamIWOxZcvTMEZcijrDKeaE.hoverable-link-text.t-14.t-bold.text-body-medium-bold.white-space-nowrap.t-black.update-components-actor__single-line-truncate > span > span:nth-child(1)'
+XPath: '//*[@id="ember53"]/div/div/div[1]/div[1]/div[3]/div/div/a/span[1]/span[1]/span/span[1]'
+
+Read More Button:
+Selector: #ember53 > div > div > div.fie-impression-container > div.biSBAHRSjISwdRScuNzWIGsuQPrAiAjY > div > button > span
+XPath: //*[@id="ember53"]/div/div/div[1]/div[2]/div/button/span
+
+Content:
+Selector: #ember53 > div > div > div.fie-impression-container > div.biSBAHRSjISwdRScuNzWIGsuQPrAiAjY > div > div
+XPath: //*[@id="ember53"]/div/div/div[1]/div[2]/div/div
+
+See Comment Button:
+Selector_1 : #feed-shared-social-action-bar-comment-ember60
+Selector_2: #feed-shared-social-action-bar-comment-ember60 > span
+XPath_1 : //*[@id="feed-shared-social-action-bar-comment-ember60"]/span
+XPath_2: //*[@id="feed-shared-social-action-bar-comment-ember60"]
+
+People's Comment:
+Selector_1: #translation-container-ember250 > div > span > div
+XPath_1: //*[@id="translation-container-ember250"]/div/span/div
+
+Texting Area:
+Selector_1: #ember238 > div > form > div > div > div.comments-comment-box-comment__text-editor > div > div > div > div > div.ql-editor.ql-blank > p
+Selector_2: #ember238 > div > form > div > div > div.comments-comment-box-comment__text-editor
+XPath_1: //*[@id="ember238"]/div/form/div/div/div[1]/div/div/div/div/div[1]/p
+XPath_2: //*[@id="ember238"]/div/form/div/div/div[1]
+
+Enter Comment Button:
+Selector_1: #ember300
+Selector_2: #ember300 > span
+XPath_1: //*[@id="ember300"]
+Element: <button id="ember300" class="comments-comment-box__submit-button--cr artdeco-button artdeco-button--1 artdeco-button--primary ember-view"><!---->
+<span class="artdeco-button__text">
+    Comment
+</span></button>
