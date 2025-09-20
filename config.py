@@ -1,7 +1,7 @@
 # config.py - Configuration for LinkedIn Comment Bot
 
 # OpenAI API Configuration
-
+OPENAI_API_KEY = "fill your api here"
 # Commenting Configuration
 COMMENTS_PER_RUN = 1  # Number of comments to post per session
 MIN_WAIT_TIME = 30  # Minimum seconds to wait between comments
@@ -100,6 +100,13 @@ SAVE_SCREENSHOTS_ON_ERROR = False  # Save screenshot when content extraction fai
 # Stage 2 Automation
 AUTO_START_STAGE_2 = False  # Automatically start Stage 2 without user prompt
 SKIP_STAGE_2_PROMPT = False  # Skip the Stage 2 confirmation prompt entirely
+
+# Integrated Commenting (Stage 2)
+AUTO_COMMENT_AFTER_EXTRACTION = True  # Automatically comment after extracting each post's content
+COMMENT_DELAY_AFTER_EXTRACTION = 3.0  # Seconds to wait between content extraction and commenting
+GENERATE_CONTEXTUAL_COMMENTS = True  # Generate comments based on post content vs generic comments
+MAX_COMMENTS_PER_SESSION = 5  # Maximum number of comments to post in one session
+COMMENT_ON_EXTRACTION_FAILURE = False  # Whether to comment even if content extraction fails
 
 # Performance Settings
 BATCH_SIZE = 5  # Process posts in batches (0 = process all at once)

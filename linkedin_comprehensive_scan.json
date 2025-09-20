@@ -1,268 +1,191 @@
 {
-  "scan_timestamp": "2025-09-19T22:58:21.320366",
+  "scan_timestamp": "2025-09-20T14:22:14.777533",
   "posts_data": [
     {
-      "ember_id": "ember25",
-      "author_name": "Alec Rickard",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
       "ember_id": "ember42",
-      "author_name": "Alec Rickard",
-      "is_sponsored": true,
+      "author_name": "Ofosua Daaku Ammah",
+      "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
+      "post_type": "normal"
     },
     {
       "ember_id": "ember94",
-      "author_name": "PayPay Corporation",
+      "author_name": "Unipro Sp. z o.o.",
       "is_sponsored": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember127",
-      "author_name": "PayPay Corporation",
+      "ember_id": "ember97",
+      "author_name": "Chris Donnelly",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember246",
+      "author_name": "Kumud Deepali R.",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember249",
+      "author_name": "Soheb Ansari",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember252",
+      "author_name": "Cedo",
       "is_sponsored": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember193",
-      "author_name": "Meera Remani",
+      "ember_id": "ember255",
+      "author_name": "Lucy Gilmour",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember211",
-      "author_name": "Meera Remani",
+      "ember_id": "ember258",
+      "author_name": "Mary Nganga",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember196",
-      "author_name": "TICA Group",
+      "ember_id": "ember261",
+      "author_name": "Justin Welsh",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember264",
+      "author_name": "pramesh gajbhiye",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember543",
+      "author_name": "Gurpreet Singh Bhatia",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember549",
+      "author_name": "Tamanda Kaunda",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember552",
+      "author_name": "Eric Partaker",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember555",
+      "author_name": "Xinje Malaysia",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember558",
+      "author_name": "Atlassian",
       "is_sponsored": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember245",
-      "author_name": "TICA Group",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember199",
-      "author_name": "César Solís",
+      "ember_id": "ember561",
+      "author_name": "Bhavesh Arora",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember275",
-      "author_name": "César Solís",
+      "ember_id": "ember564",
+      "author_name": "sisay gebru",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember202",
-      "author_name": "Nadir Ali",
+      "ember_id": "ember567",
+      "author_name": "Sanjay Ramchandra Sarwankar",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember388",
-      "author_name": "Nadir Ali",
+      "ember_id": "ember862",
+      "author_name": "Véronique Barrot",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember205",
-      "author_name": "Neha Jain",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember324",
-      "author_name": "Neha Jain",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember208",
-      "author_name": "Input Output (IOHK)",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember358",
-      "author_name": "Input Output (IOHK)",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember469",
-      "author_name": "Ayush Vardhan",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember669",
-      "author_name": "Ayush Vardhan",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember472",
-      "author_name": "TXF",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember642",
-      "author_name": "TXF",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember475",
-      "author_name": "Dr. Chris Mullen",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember516",
-      "author_name": "Dr. Chris Mullen",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember478",
-      "author_name": "Mark D. Gordon",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember611",
-      "author_name": "Mark D. Gordon",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember481",
-      "author_name": "Chhavi pandey",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember487",
-      "author_name": "Chhavi pandey",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember484",
-      "author_name": "Mercure & ibis Styles Vung Tau",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember582",
-      "author_name": "Mercure & ibis Styles Vung Tau",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember713",
-      "author_name": "Nocode Saas",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember747",
-      "author_name": "Nocode Saas",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember716",
-      "author_name": "Tim Zheng",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember774",
-      "author_name": "Tim Zheng",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember719",
-      "author_name": "Hussain Asghar",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember804",
-      "author_name": "Hussain Asghar",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember722",
-      "author_name": "Madison Rollins",
+      "ember_id": "ember865",
+      "author_name": "Muhammad Yasir Malkani",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
       "ember_id": "ember868",
-      "author_name": "Madison Rollins",
+      "author_name": "Vũ Nguyễn",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember725",
-      "author_name": "Daivata Chavan-Patil (She/Her)",
+      "ember_id": "ember871",
+      "author_name": "Richa Bharti 🇮🇳",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember906",
-      "author_name": "Daivata Chavan-Patil (She/Her)",
+      "ember_id": "ember874",
+      "author_name": "Deutschland.de",
+      "is_sponsored": true,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "sponsored"
+    },
+    {
+      "ember_id": "ember877",
+      "author_name": "Ravi Katta",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember880",
+      "author_name": "DataCamp",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember883",
+      "author_name": "Abhishek Jha",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember886",
+      "author_name": "Sanjiv Beri",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
@@ -270,183 +193,162 @@
   ],
   "normal_posts": [
     {
-      "ember_id": "ember193",
-      "author_name": "Meera Remani",
+      "ember_id": "ember42",
+      "author_name": "Ofosua Daaku Ammah",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember211",
-      "author_name": "Meera Remani",
+      "ember_id": "ember97",
+      "author_name": "Chris Donnelly",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember199",
-      "author_name": "César Solís",
+      "ember_id": "ember246",
+      "author_name": "Kumud Deepali R.",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember275",
-      "author_name": "César Solís",
+      "ember_id": "ember249",
+      "author_name": "Soheb Ansari",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember202",
-      "author_name": "Nadir Ali",
+      "ember_id": "ember255",
+      "author_name": "Lucy Gilmour",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember388",
-      "author_name": "Nadir Ali",
+      "ember_id": "ember258",
+      "author_name": "Mary Nganga",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember205",
-      "author_name": "Neha Jain",
+      "ember_id": "ember261",
+      "author_name": "Justin Welsh",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember324",
-      "author_name": "Neha Jain",
+      "ember_id": "ember264",
+      "author_name": "pramesh gajbhiye",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember469",
-      "author_name": "Ayush Vardhan",
+      "ember_id": "ember543",
+      "author_name": "Gurpreet Singh Bhatia",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember669",
-      "author_name": "Ayush Vardhan",
+      "ember_id": "ember549",
+      "author_name": "Tamanda Kaunda",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember475",
-      "author_name": "Dr. Chris Mullen",
+      "ember_id": "ember552",
+      "author_name": "Eric Partaker",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember516",
-      "author_name": "Dr. Chris Mullen",
+      "ember_id": "ember555",
+      "author_name": "Xinje Malaysia",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember478",
-      "author_name": "Mark D. Gordon",
+      "ember_id": "ember561",
+      "author_name": "Bhavesh Arora",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember611",
-      "author_name": "Mark D. Gordon",
+      "ember_id": "ember564",
+      "author_name": "sisay gebru",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember481",
-      "author_name": "Chhavi pandey",
+      "ember_id": "ember567",
+      "author_name": "Sanjay Ramchandra Sarwankar",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember487",
-      "author_name": "Chhavi pandey",
+      "ember_id": "ember862",
+      "author_name": "Véronique Barrot",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember713",
-      "author_name": "Nocode Saas",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember747",
-      "author_name": "Nocode Saas",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember716",
-      "author_name": "Tim Zheng",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember774",
-      "author_name": "Tim Zheng",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember719",
-      "author_name": "Hussain Asghar",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember804",
-      "author_name": "Hussain Asghar",
-      "is_sponsored": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember722",
-      "author_name": "Madison Rollins",
+      "ember_id": "ember865",
+      "author_name": "Muhammad Yasir Malkani",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
       "ember_id": "ember868",
-      "author_name": "Madison Rollins",
+      "author_name": "Vũ Nguyễn",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember725",
-      "author_name": "Daivata Chavan-Patil (She/Her)",
+      "ember_id": "ember871",
+      "author_name": "Richa Bharti 🇮🇳",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember906",
-      "author_name": "Daivata Chavan-Patil (She/Her)",
+      "ember_id": "ember877",
+      "author_name": "Ravi Katta",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember880",
+      "author_name": "DataCamp",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember883",
+      "author_name": "Abhishek Jha",
+      "is_sponsored": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember886",
+      "author_name": "Sanjiv Beri",
       "is_sponsored": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
@@ -454,97 +356,215 @@
   ],
   "sponsored_posts": [
     {
-      "ember_id": "ember25",
-      "author_name": "Alec Rickard",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember42",
-      "author_name": "Alec Rickard",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
       "ember_id": "ember94",
-      "author_name": "PayPay Corporation",
+      "author_name": "Unipro Sp. z o.o.",
       "is_sponsored": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember127",
-      "author_name": "PayPay Corporation",
+      "ember_id": "ember252",
+      "author_name": "Cedo",
       "is_sponsored": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember196",
-      "author_name": "TICA Group",
+      "ember_id": "ember558",
+      "author_name": "Atlassian",
       "is_sponsored": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember245",
-      "author_name": "TICA Group",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember208",
-      "author_name": "Input Output (IOHK)",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember358",
-      "author_name": "Input Output (IOHK)",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember472",
-      "author_name": "TXF",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember642",
-      "author_name": "TXF",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember484",
-      "author_name": "Mercure & ibis Styles Vung Tau",
-      "is_sponsored": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember582",
-      "author_name": "Mercure & ibis Styles Vung Tau",
+      "ember_id": "ember874",
+      "author_name": "Deutschland.de",
       "is_sponsored": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     }
   ],
-  "ember_elements_found": 745,
+  "ember_elements_found": 952,
   "scan_summary": {
-    "total_ember_elements": 745,
-    "total_posts_processed": 38,
-    "total_posts_with_authors": 38,
-    "normal_posts_count": 26,
-    "sponsored_posts_count": 12,
-    "unique_authors_count": 19
-  }
+    "total_ember_elements": 952,
+    "total_posts_processed": 27,
+    "total_posts_with_authors": 27,
+    "normal_posts_count": 23,
+    "sponsored_posts_count": 4,
+    "unique_authors_count": 27
+  },
+  "cleanup_info": {
+    "cleanup_timestamp": "2025-09-20T14:22:14.777069",
+    "original_post_count": 54,
+    "final_post_count": 27,
+    "authors_processed": 27,
+    "duplicates_removed": 27,
+    "cleanup_strategy": "keep_first_normal",
+    "removed_posts": [
+      {
+        "ember_id": "ember25",
+        "author_name": "Ofosua Daaku Ammah",
+        "is_sponsored": true,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember192",
+        "author_name": "Unipro Sp. z o.o.",
+        "is_sponsored": true,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember127",
+        "author_name": "Chris Donnelly",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember456",
+        "author_name": "Kumud Deepali R.",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember508",
+        "author_name": "Soheb Ansari",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember382",
+        "author_name": "Cedo",
+        "is_sponsored": true,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember412",
+        "author_name": "Lucy Gilmour",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember326",
+        "author_name": "Mary Nganga",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember276",
+        "author_name": "Justin Welsh",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember353",
+        "author_name": "pramesh gajbhiye",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember749",
+        "author_name": "Gurpreet Singh Bhatia",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember596",
+        "author_name": "Tamanda Kaunda",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember698",
+        "author_name": "Eric Partaker",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember667",
+        "author_name": "Xinje Malaysia",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember781",
+        "author_name": "Atlassian",
+        "is_sponsored": true,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember637",
+        "author_name": "Bhavesh Arora",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember570",
+        "author_name": "sisay gebru",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember808",
+        "author_name": "Sanjay Ramchandra Sarwankar",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember1075",
+        "author_name": "Véronique Barrot",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember1203",
+        "author_name": "Muhammad Yasir Malkani",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember1126",
+        "author_name": "Vũ Nguyễn",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember1155",
+        "author_name": "Richa Bharti 🇮🇳",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember968",
+        "author_name": "Deutschland.de",
+        "is_sponsored": true,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember995",
+        "author_name": "Ravi Katta",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember940",
+        "author_name": "DataCamp",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember1043",
+        "author_name": "Abhishek Jha",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      },
+      {
+        "ember_id": "ember889",
+        "author_name": "Sanjiv Beri",
+        "is_sponsored": false,
+        "reason": "duplicate_author_keep_first_normal"
+      }
+    ]
+  },
+  "cleanup_applied": true,
+  "original_scan_timestamp": "2025-09-20T14:20:40.827290"
 }

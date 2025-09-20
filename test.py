@@ -5,6 +5,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException, TimeoutException, ElementClickInterceptedException
 from chrome_initialize import LinkedInCommentBot
+from duplicate_cleanup import DuplicateAuthorCleanup
+from comment_action import LinkedInCommentAction
 import config
 
 class LinkedInComprehensiveScanner(LinkedInCommentBot):
@@ -364,6 +366,94 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
 
         return content_data
 
+    def generate_contextual_comment(self, post_content, author_name):
+        """
+        Generate contextual comments based on post content
+        """
+        if not post_content:
+            return self.get_generic_comment()
+
+        content_lower = post_content.lower()
+
+        # Analyze content type and generate appropriate comment
+        if any(word in content_lower for word in ['congratulations', 'congrats', 'achievement', 'promotion', 'new role', 'landed', 'hired']):
+            # Achievement/Success posts
+            comments = [
+                f"Congratulations {author_name}! This is truly inspiring!",
+                f"What an amazing achievement! Well done {author_name}!",
+                f"Fantastic news! Your success is well-deserved {author_name}.",
+                "This is incredible! Congratulations on this achievement!",
+                "Such inspiring news! Wishing you continued success!"
+            ]
+
+        elif any(word in content_lower for word in ['rejected', 'rejection', 'job search', 'interview', 'applying', 'hiring']):
+            # Job search/Career posts
+            comments = [
+                "Thank you for sharing this valuable perspective on the job search process.",
+                "This resonates with so many professionals. Thanks for the honest insights!",
+                "Really appreciate you sharing these important career insights.",
+                "Your experience will definitely help others navigating similar challenges.",
+                "Thanks for being so open about this journey - very helpful insights!"
+            ]
+
+        elif any(word in content_lower for word in ['tip', 'advice', 'learn', 'strategy', 'guide', 'how to']):
+            # Educational/Tips posts
+            comments = [
+                "Great insights! These tips are really valuable.",
+                "Thanks for sharing this practical advice!",
+                "Really useful information - appreciate you sharing this!",
+                "These are excellent points. Thanks for the valuable insights!",
+                "Such helpful advice! Thanks for sharing your knowledge."
+            ]
+
+        elif any(word in content_lower for word in ['team', 'project', 'collaboration', 'working together']):
+            # Team/Collaboration posts
+            comments = [
+                "Love seeing great teamwork in action! Thanks for sharing.",
+                "This is what effective collaboration looks like. Great work!",
+                "Inspiring to see such strong team dynamics. Well done!",
+                "Teamwork makes the dream work! Great example here.",
+                "This is a perfect example of successful collaboration!"
+            ]
+
+        elif '?' in post_content:
+            # Question posts
+            comments = [
+                "Great question! Looking forward to seeing the insights from the community.",
+                "This is such an important question. Thanks for starting this discussion!",
+                "Really thoughtful question - excited to see the responses!",
+                "This deserves more discussion. Thanks for bringing it up!",
+                "Excellent question that many of us can relate to!"
+            ]
+
+        else:
+            # General/Default posts
+            comments = [
+                "Great insights! Thanks for sharing this valuable content.",
+                "Really appreciate you sharing this perspective!",
+                "This is exactly the kind of content that adds value. Thank you!",
+                "Thanks for taking the time to share these thoughts!",
+                "Really thoughtful post - appreciate the insights!"
+            ]
+
+        # Return a random comment from the appropriate category
+        import random
+        return random.choice(comments)
+
+    def get_generic_comment(self):
+        """
+        Get a generic comment when content analysis fails
+        """
+        import random
+        generic_comments = [
+            "Thanks for sharing this valuable content!",
+            "Great post! Really appreciate the insights.",
+            "This is exactly the kind of content that adds value.",
+            "Thanks for taking the time to share this!",
+            "Really thoughtful post - thanks for sharing!"
+        ]
+        return random.choice(generic_comments)
+
     def load_valid_posts(self, filename="linkedin_comprehensive_scan.json"):
         """
         Load valid (non-sponsored) posts from Stage 1 results
@@ -411,10 +501,10 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
 
     def extract_content_from_valid_posts(self, valid_posts=None):
         """
-        Stage 2: Extract content from valid posts identified in Stage 1
+        Stage 2: Extract content from valid posts and optionally comment immediately
         """
-        print("\n🚀 Starting Stage 2: Content Extraction...")
-        print("="*60)
+        print("\n🚀 Starting Stage 2: Content Extraction & Integrated Commenting...")
+        print("="*80)
 
         # Validate configuration
         config_warnings = config.validate_config()
@@ -449,6 +539,20 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
         self.content_results["total_posts_processed"] = len(filtered_posts)
         print(f"📊 Processing {len(filtered_posts)} filtered posts for content extraction...")
         print(f"⚙️  Configuration: {config.DELAY_BETWEEN_POSTS}s delay, auto-expand: {config.AUTO_EXPAND_READ_MORE}")
+
+        # Initialize comment action if auto-commenting is enabled
+        commenter = None
+        comments_posted = 0
+        comment_results = []
+
+        if config.AUTO_COMMENT_AFTER_EXTRACTION:
+            print(f"💬 Auto-commenting enabled: will comment after each content extraction")
+            print(f"📊 Max comments per session: {config.MAX_COMMENTS_PER_SESSION}")
+            print(f"⏱️  Comment delay: {config.COMMENT_DELAY_AFTER_EXTRACTION}s")
+
+            commenter = LinkedInCommentAction()
+            commenter.driver = self.driver  # Use the same browser session
+            commenter.cleanup = lambda: None  # Prevent commenter from closing our browser
 
         # Process each valid post
         processed_count = 0
@@ -510,6 +614,69 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
                     processed_count += 1
                     success = True
 
+                    # ========== IMMEDIATE COMMENTING AFTER EXTRACTION ==========
+                    if (commenter and
+                        comments_posted < config.MAX_COMMENTS_PER_SESSION and
+                        content_data.get("content") and
+                        (config.COMMENT_ON_EXTRACTION_FAILURE or not content_data.get("errors"))):
+
+                        print(f"\n💬 Attempting to comment on post {ember_id}...")
+
+                        # Wait a bit after content extraction before commenting
+                        time.sleep(config.COMMENT_DELAY_AFTER_EXTRACTION)
+
+                        try:
+                            # Generate contextual comment based on extracted content
+                            if config.GENERATE_CONTEXTUAL_COMMENTS:
+                                comment_text = self.generate_contextual_comment(
+                                    content_data.get("content", ""),
+                                    author_name
+                                )
+                            else:
+                                comment_text = self.get_generic_comment()
+
+                            print(f"💭 Generated comment: {comment_text[:60]}...")
+
+                            # Post the comment
+                            comment_success = commenter.post_comment_by_ember_id(ember_id, comment_text)
+
+                            # Record comment result
+                            comment_result = {
+                                "ember_id": ember_id,
+                                "author_name": author_name,
+                                "comment_text": comment_text,
+                                "comment_success": comment_success,
+                                "post_content_preview": content_data.get("content", "")[:100]
+                            }
+                            comment_results.append(comment_result)
+
+                            if comment_success:
+                                comments_posted += 1
+                                print(f"✅ Comment posted successfully! ({comments_posted}/{config.MAX_COMMENTS_PER_SESSION})")
+
+                                # Add comment data to content results
+                                content_data["comment_posted"] = True
+                                content_data["comment_text"] = comment_text
+                            else:
+                                print(f"❌ Comment posting failed")
+                                content_data["comment_posted"] = False
+                                content_data["comment_error"] = "Posting failed"
+
+                        except Exception as e:
+                            print(f"❌ Error during commenting: {e}")
+                            content_data["comment_posted"] = False
+                            content_data["comment_error"] = str(e)
+
+                    elif commenter and comments_posted >= config.MAX_COMMENTS_PER_SESSION:
+                        print(f"⏭️ Skipping comment - reached max comments per session ({config.MAX_COMMENTS_PER_SESSION})")
+                        content_data["comment_posted"] = False
+                        content_data["comment_skipped"] = "Max comments reached"
+
+                    elif commenter and not content_data.get("content"):
+                        print(f"⏭️ Skipping comment - no content extracted")
+                        content_data["comment_posted"] = False
+                        content_data["comment_skipped"] = "No content"
+
                     # Save incrementally if configured
                     if config.SAVE_CONTENT_INCREMENTALLY and processed_count % 5 == 0:
                         self.save_content_results(f"linkedin_content_extraction_partial_{processed_count}.json")
@@ -565,20 +732,39 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
                 break
 
         print(f"\n✅ Content extraction completed!")
-        self.print_content_extraction_summary()
 
-    def print_content_extraction_summary(self):
+        # Add comment results to content results for saving
+        if comment_results:
+            self.content_results["comment_session"] = {
+                "comments_posted": comments_posted,
+                "total_attempts": len(comment_results),
+                "max_comments_per_session": config.MAX_COMMENTS_PER_SESSION,
+                "comment_results": comment_results
+            }
+
+        self.print_content_extraction_summary(comments_posted, comment_results)
+
+    def print_content_extraction_summary(self, comments_posted=0, comment_results=None):
         """
-        Print a summary of the content extraction results
+        Print a summary of the content extraction and commenting results
         """
         print("\n" + "="*80)
-        print("📊 STAGE 2: CONTENT EXTRACTION SUMMARY")
+        print("📊 STAGE 2: CONTENT EXTRACTION & COMMENTING SUMMARY")
         print("="*80)
 
         print(f"🔍 Total posts processed: {self.content_results['total_posts_processed']}")
         print(f"📝 Posts with content extracted: {self.content_results['posts_with_content']}")
         print(f"📖 Posts with Read More buttons: {self.content_results['posts_with_read_more']}")
         print(f"✅ Successful expansions: {self.content_results['expansion_successful']}")
+
+        # Comment statistics
+        if comments_posted > 0 or comment_results:
+            print(f"\n💬 COMMENTING RESULTS:")
+            print(f"📝 Comments posted: {comments_posted}")
+            if comment_results:
+                successful_comments = sum(1 for r in comment_results if r.get('comment_success'))
+                print(f"✅ Successful comments: {successful_comments}/{len(comment_results)}")
+                print(f"📊 Success rate: {(successful_comments/len(comment_results)*100):.1f}%")
 
         if self.content_results['posts_with_content'] > 0:
             # Show content length statistics
@@ -616,10 +802,10 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
 
 def main():
     """
-    Main test function that runs the two-stage workflow
+    Main test function that runs the integrated two-stage workflow
     """
-    print("🚀 Starting LinkedIn Comprehensive Scanner - Two-Stage Workflow")
-    print("="*70)
+    print("🚀 Starting LinkedIn Comprehensive Scanner - Integrated Two-Stage Workflow")
+    print("="*80)
 
     scanner = LinkedInComprehensiveScanner()
 
@@ -645,7 +831,33 @@ def main():
         # Print comprehensive results
         scanner.print_comprehensive_results()
 
-        # Show Stage 1 completion summary
+        # ========== DUPLICATE CLEANUP ==========
+        print(f"\n🧹 DUPLICATE CLEANUP")
+        print("=" * 50)
+
+        cleanup_tool = DuplicateAuthorCleanup()
+
+        # Analyze duplicates first
+        print("Checking for duplicate authors...")
+        author_posts, duplicate_authors = cleanup_tool.analyze_duplicates(scanner.scan_results.get("posts_data", []))
+
+        if duplicate_authors:
+            print(f"⚠️ Found {len(duplicate_authors)} authors with duplicate posts")
+
+            # Apply cleanup with default strategy (keep_first_normal)
+            print("Applying cleanup strategy: keep_first_normal")
+            cleanup_success = cleanup_tool.clean_scan_file("linkedin_comprehensive_scan.json", strategy="keep_first_normal")
+
+            if cleanup_success:
+                print("✅ Duplicate cleanup completed successfully!")
+                # Reload the cleaned data
+                scanner.scan_results = cleanup_tool.load_scan_data("linkedin_comprehensive_scan.json")
+            else:
+                print("❌ Duplicate cleanup failed, proceeding with original data")
+        else:
+            print("✅ No duplicate authors found - proceeding with original data")
+
+        # Show Stage 1 completion summary with cleaned data
         normal_posts_count = len(scanner.scan_results.get("normal_posts", []))
         sponsored_posts_count = len(scanner.scan_results.get("sponsored_posts", []))
 
@@ -657,11 +869,11 @@ def main():
         # Initialize user_choice for scope
         user_choice = 'skip'
 
-        # ========== STAGE 2: CONTENT EXTRACTION (OPTIONAL) ==========
+        # ========== STAGE 2: CONTENT EXTRACTION & COMMENTING (OPTIONAL) ==========
         if normal_posts_count > 0:
-            print("\n" + "="*70)
-            print("🚀 STAGE 2: Content Extraction (Optional)")
-            print("="*50)
+            print("\n" + "="*80)
+            print("🚀 STAGE 2: Content Extraction & Integrated Commenting (Optional)")
+            print("="*60)
 
             # Calculate estimated posts after filtering
             estimated_posts = min(normal_posts_count, config.MAX_POSTS_TO_PROCESS if config.MAX_POSTS_TO_PROCESS > 0 else normal_posts_count)
@@ -670,6 +882,15 @@ def main():
             print("⚠️  This process will click 'Read More' buttons and extract full post content")
             print("⏱️  Estimated time: ~{:.1f} minutes".format(estimated_posts * config.DELAY_BETWEEN_POSTS / 60))
             print(f"⚙️  Config: MAX_POSTS_TO_PROCESS = {config.MAX_POSTS_TO_PROCESS}")
+
+            # Show commenting configuration
+            if config.AUTO_COMMENT_AFTER_EXTRACTION:
+                print(f"\n💬 INTEGRATED COMMENTING ENABLED:")
+                print(f"   • Max comments per session: {config.MAX_COMMENTS_PER_SESSION}")
+                print(f"   • Contextual comments: {config.GENERATE_CONTEXTUAL_COMMENTS}")
+                print(f"   • Comment delay: {config.COMMENT_DELAY_AFTER_EXTRACTION}s")
+            else:
+                print(f"\n💬 Integrated commenting is DISABLED (AUTO_COMMENT_AFTER_EXTRACTION = False)")
 
             # Check for automation settings
             if config.AUTO_START_STAGE_2:
@@ -701,13 +922,13 @@ def main():
             print(f"📢 Only sponsored posts were detected - skipping Stage 2")
 
         # Final summary
-        print("\n" + "="*70)
-        print("🏁 TWO-STAGE WORKFLOW COMPLETED!")
-        print("="*70)
+        print("\n" + "="*80)
+        print("🏁 INTEGRATED TWO-STAGE WORKFLOW COMPLETED!")
+        print("="*80)
         print("📁 Generated Files:")
-        print("   • linkedin_comprehensive_scan.json - Post discovery results")
+        print("   • linkedin_comprehensive_scan.json - Post discovery & cleaned results")
         if normal_posts_count > 0 and user_choice not in ['n', 'no', 'skip']:
-            print(f"   • {config.CONTENT_EXTRACTION_FILENAME} - Content extraction results")
+            print(f"   • {config.CONTENT_EXTRACTION_FILENAME} - Content extraction & commenting results")
 
         print(f"\n📊 Final Summary:")
         print(f"   • Total posts processed: {len(scanner.scan_results.get('posts_data', []))}")
@@ -715,6 +936,18 @@ def main():
         print(f"   • Sponsored posts: {sponsored_posts_count}")
         if hasattr(scanner, 'content_results') and scanner.content_results.get('posts_with_content', 0) > 0:
             print(f"   • Posts with content extracted: {scanner.content_results['posts_with_content']}")
+
+        # Show comment statistics if available
+        if hasattr(scanner, 'content_results') and scanner.content_results.get('comment_session'):
+            comment_session = scanner.content_results['comment_session']
+            print(f"   • Comments posted: {comment_session.get('comments_posted', 0)}")
+            print(f"   • Comment attempts: {comment_session.get('total_attempts', 0)}")
+
+        print(f"\n🧹 Cleanup Summary:")
+        if duplicate_authors:
+            print(f"   • Duplicate authors found and cleaned: {len(duplicate_authors)}")
+        else:
+            print("   • No duplicate authors found")
 
         input("\n✅ Workflow complete! Press Enter to close browser...")
 
