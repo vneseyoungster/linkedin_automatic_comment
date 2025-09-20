@@ -17,6 +17,7 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
             "posts_data": [],
             "normal_posts": [],
             "sponsored_posts": [],
+            "vietnamese_posts": [],
             "ember_elements_found": 0,
             "scan_summary": {}
         }
@@ -39,6 +40,47 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
             promoted_text = post_element.text.lower()
             return 'promoted' in promoted_text or 'sponsored' in promoted_text
         except:
+            return False
+
+    def is_vietnamese_post(self, post_element):
+        """
+        Detect Vietnamese language posts
+        """
+        try:
+            post_text = post_element.text
+
+            # Vietnamese Unicode ranges (Vietnamese diacritics)
+            vietnamese_chars = [
+                'à', 'á', 'ả', 'ã', 'ạ', 'ă', 'ằ', 'ắ', 'ẳ', 'ẵ', 'ặ',
+                'â', 'ầ', 'ấ', 'ẩ', 'ẫ', 'ậ', 'è', 'é', 'ẻ', 'ẽ', 'ẹ',
+                'ê', 'ề', 'ế', 'ể', 'ễ', 'ệ', 'ì', 'í', 'ỉ', 'ĩ', 'ị',
+                'ò', 'ó', 'ỏ', 'õ', 'ọ', 'ô', 'ồ', 'ố', 'ổ', 'ỗ', 'ộ',
+                'ơ', 'ờ', 'ớ', 'ở', 'ỡ', 'ợ', 'ù', 'ú', 'ủ', 'ũ', 'ụ',
+                'ư', 'ừ', 'ứ', 'ử', 'ữ', 'ự', 'ỳ', 'ý', 'ỷ', 'ỹ', 'ỵ',
+                'đ', 'Đ'
+            ]
+
+            # Common Vietnamese words
+            vietnamese_words = [
+                'và', 'của', 'trong', 'với', 'cho', 'từ', 'theo', 'về',
+                'được', 'có', 'là', 'một', 'các', 'này', 'để', 'những',
+                'như', 'khi', 'hay', 'đã', 'sẽ', 'không', 'tôi', 'bạn',
+                'chúng', 'việc', 'công', 'ty', 'doanh', 'nghiệp'
+            ]
+
+            # Check for Vietnamese characters
+            vietnamese_char_count = sum(1 for char in post_text if char in vietnamese_chars)
+
+            # Check for Vietnamese words
+            text_lower = post_text.lower()
+            vietnamese_word_count = sum(1 for word in vietnamese_words if word in text_lower)
+
+            # Consider it Vietnamese if:
+            # - Has 3+ Vietnamese diacritical characters, OR
+            # - Has 2+ common Vietnamese words
+            return vietnamese_char_count >= 3 or vietnamese_word_count >= 2
+
+        except Exception:
             return False
 
     def extract_author_name(self, element):
@@ -146,13 +188,25 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
                 # Check if it's a sponsored post
                 is_sponsored = self.is_promoted_post(container["element"])
 
+                # Check if it's a Vietnamese post
+                is_vietnamese = self.is_vietnamese_post(container["element"])
+
+                # Determine post type with priority: sponsored > vietnamese > normal
+                if is_sponsored:
+                    post_type = "sponsored"
+                elif is_vietnamese:
+                    post_type = "vietnamese"
+                else:
+                    post_type = "normal"
+
                 # Create post data
                 post_data = {
                     "ember_id": container["ember_id"],
                     "author_name": author_data["author_name"],
                     "is_sponsored": is_sponsored,
+                    "is_vietnamese": is_vietnamese,
                     "selector_used": author_data.get("selector_used"),
-                    "post_type": "sponsored" if is_sponsored else "normal"
+                    "post_type": post_type
                 }
 
                 # Add to appropriate lists
@@ -161,6 +215,9 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
                 if is_sponsored:
                     self.scan_results["sponsored_posts"].append(post_data)
                     print(f"📢 Sponsored post found: {author_data['author_name']} (ID: {container['ember_id']})")
+                elif is_vietnamese:
+                    self.scan_results["vietnamese_posts"].append(post_data)
+                    print(f"🇻🇳 Vietnamese post found: {author_data['author_name']} (ID: {container['ember_id']})")
                 else:
                     self.scan_results["normal_posts"].append(post_data)
                     print(f"👤 Normal post found: {author_data['author_name']} (ID: {container['ember_id']})")
@@ -176,6 +233,7 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
             "total_posts_with_authors": len(self.scan_results["posts_data"]),
             "normal_posts_count": len(self.scan_results["normal_posts"]),
             "sponsored_posts_count": len(self.scan_results["sponsored_posts"]),
+            "vietnamese_posts_count": len(self.scan_results["vietnamese_posts"]),
             "unique_authors_count": len(set([p["author_name"] for p in self.scan_results["posts_data"] if p["author_name"]]))
         }
 
@@ -207,6 +265,7 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
         print(f"👥 Posts with authors found: {summary['total_posts_with_authors']}")
         print(f"📄 Normal posts: {summary['normal_posts_count']}")
         print(f"📢 Sponsored posts: {summary['sponsored_posts_count']}")
+        print(f"🇻🇳 Vietnamese posts: {summary['vietnamese_posts_count']}")
         print(f"👤 Unique authors: {summary['unique_authors_count']}")
 
         # Show normal posts
@@ -227,6 +286,15 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
         else:
             print("No sponsored posts found")
 
+        # Show Vietnamese posts
+        print(f"\n🇻🇳 VIETNAMESE POSTS ({len(self.scan_results['vietnamese_posts'])} found):")
+        print("-" * 60)
+        if self.scan_results["vietnamese_posts"]:
+            for i, post in enumerate(self.scan_results["vietnamese_posts"], 1):
+                print(f"{i}. {post['author_name']} (Ember ID: {post['ember_id']})")
+        else:
+            print("No Vietnamese posts found")
+
         # Show all unique authors
         print(f"\n👥 UNIQUE AUTHORS ({summary['unique_authors_count']} found):")
         print("-" * 60)
@@ -234,7 +302,12 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
         for post in self.scan_results["posts_data"]:
             if post["author_name"] and post["author_name"] not in unique_authors:
                 unique_authors.add(post["author_name"])
-                post_type = "📢 Sponsored" if post["is_sponsored"] else "📄 Normal"
+                if post["is_sponsored"]:
+                    post_type = "📢 Sponsored"
+                elif post.get("is_vietnamese", False):
+                    post_type = "🇻🇳 Vietnamese"
+                else:
+                    post_type = "📄 Normal"
                 print(f"• {post['author_name']} - {post_type}")
 
         print("="*80)
@@ -366,93 +439,40 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
 
         return content_data
 
-    def generate_contextual_comment(self, post_content, author_name):
+    def generate_comment_by_llm(self, post_content, author_name):
         """
-        Generate contextual comments based on post content
+        Generate contextual comments using OpenAI LLM based on post content
         """
-        if not post_content:
-            return self.get_generic_comment()
+        try:
+            from openai import OpenAI
+            import config
 
-        content_lower = post_content.lower()
+            # Initialize OpenAI client
+            client = OpenAI(api_key=config.OPENAI_API_KEY)
 
-        # Analyze content type and generate appropriate comment
-        if any(word in content_lower for word in ['congratulations', 'congrats', 'achievement', 'promotion', 'new role', 'landed', 'hired']):
-            # Achievement/Success posts
-            comments = [
-                f"Congratulations {author_name}! This is truly inspiring!",
-                f"What an amazing achievement! Well done {author_name}!",
-                f"Fantastic news! Your success is well-deserved {author_name}.",
-                "This is incredible! Congratulations on this achievement!",
-                "Such inspiring news! Wishing you continued success!"
-            ]
+            # Use the prompt from config.py
+            prompt = config.COMMENT_PROMPT.format(
+                author_name=author_name,
+                post_content=post_content if post_content else "No content available"
+            )
 
-        elif any(word in content_lower for word in ['rejected', 'rejection', 'job search', 'interview', 'applying', 'hiring']):
-            # Job search/Career posts
-            comments = [
-                "Thank you for sharing this valuable perspective on the job search process.",
-                "This resonates with so many professionals. Thanks for the honest insights!",
-                "Really appreciate you sharing these important career insights.",
-                "Your experience will definitely help others navigating similar challenges.",
-                "Thanks for being so open about this journey - very helpful insights!"
-            ]
+            # Generate comment using OpenAI
+            response = client.chat.completions.create(
+                model="gpt-5",  # Using cost-effective model
+                messages=[
+                    {"role": "user", "content": prompt}
+                ]
+            
+            )
 
-        elif any(word in content_lower for word in ['tip', 'advice', 'learn', 'strategy', 'guide', 'how to']):
-            # Educational/Tips posts
-            comments = [
-                "Great insights! These tips are really valuable.",
-                "Thanks for sharing this practical advice!",
-                "Really useful information - appreciate you sharing this!",
-                "These are excellent points. Thanks for the valuable insights!",
-                "Such helpful advice! Thanks for sharing your knowledge."
-            ]
+            generated_comment = response.choices[0].message.content.strip()
+            print(f"✅ Generated LLM comment: {generated_comment[:60]}...")
+            return generated_comment
 
-        elif any(word in content_lower for word in ['team', 'project', 'collaboration', 'working together']):
-            # Team/Collaboration posts
-            comments = [
-                "Love seeing great teamwork in action! Thanks for sharing.",
-                "This is what effective collaboration looks like. Great work!",
-                "Inspiring to see such strong team dynamics. Well done!",
-                "Teamwork makes the dream work! Great example here.",
-                "This is a perfect example of successful collaboration!"
-            ]
-
-        elif '?' in post_content:
-            # Question posts
-            comments = [
-                "Great question! Looking forward to seeing the insights from the community.",
-                "This is such an important question. Thanks for starting this discussion!",
-                "Really thoughtful question - excited to see the responses!",
-                "This deserves more discussion. Thanks for bringing it up!",
-                "Excellent question that many of us can relate to!"
-            ]
-
-        else:
-            # General/Default posts
-            comments = [
-                "Great insights! Thanks for sharing this valuable content.",
-                "Really appreciate you sharing this perspective!",
-                "This is exactly the kind of content that adds value. Thank you!",
-                "Thanks for taking the time to share these thoughts!",
-                "Really thoughtful post - appreciate the insights!"
-            ]
-
-        # Return a random comment from the appropriate category
-        import random
-        return random.choice(comments)
-
-    def get_generic_comment(self):
-        """
-        Get a generic comment when content analysis fails
-        """
-        import random
-        generic_comments = [
-            "Thanks for sharing this valuable content!",
-            "Great post! Really appreciate the insights.",
-            "This is exactly the kind of content that adds value.",
-            "Thanks for taking the time to share this!",
-            "Really thoughtful post - thanks for sharing!"
-        ]
-        return random.choice(generic_comments)
+        except Exception as e:
+            print(f"❌ Error generating LLM comment: {e}")
+            # Fallback to a simple generic comment
+            return f"Thanks for sharing this valuable content, {author_name}! Really appreciate the insights."
 
     def load_valid_posts(self, filename="linkedin_comprehensive_scan.json"):
         """
@@ -493,6 +513,11 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
             # Apply sponsored filter
             if not config.EXTRACT_FROM_SPONSORED and post.get("is_sponsored", False):
                 print(f"⏭️  Skipping sponsored post by {author_name}")
+                continue
+
+            # Apply Vietnamese filter
+            if config.SKIP_VIETNAMESE_POSTS and post.get("is_vietnamese", False):
+                print(f"⏭️  Skipping Vietnamese post by {author_name}")
                 continue
 
             filtered_posts.append(post)
@@ -626,14 +651,11 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
                         time.sleep(config.COMMENT_DELAY_AFTER_EXTRACTION)
 
                         try:
-                            # Generate contextual comment based on extracted content
-                            if config.GENERATE_CONTEXTUAL_COMMENTS:
-                                comment_text = self.generate_contextual_comment(
-                                    content_data.get("content", ""),
-                                    author_name
-                                )
-                            else:
-                                comment_text = self.get_generic_comment()
+                            # Generate contextual comment using OpenAI LLM
+                            comment_text = self.generate_comment_by_llm(
+                                content_data.get("content", ""),
+                                author_name
+                            )
 
                             print(f"💭 Generated comment: {comment_text[:60]}...")
 
@@ -860,10 +882,12 @@ def main():
         # Show Stage 1 completion summary with cleaned data
         normal_posts_count = len(scanner.scan_results.get("normal_posts", []))
         sponsored_posts_count = len(scanner.scan_results.get("sponsored_posts", []))
+        vietnamese_posts_count = len(scanner.scan_results.get("vietnamese_posts", []))
 
         print(f"\n✅ STAGE 1 COMPLETED!")
-        print(f"📊 Found {normal_posts_count} valid posts (non-sponsored)")
+        print(f"📊 Found {normal_posts_count} valid posts (non-sponsored, non-Vietnamese)")
         print(f"📢 Found {sponsored_posts_count} sponsored posts")
+        print(f"🇻🇳 Found {vietnamese_posts_count} Vietnamese posts")
         print(f"💾 Results saved to 'linkedin_comprehensive_scan.json'")
 
         # Initialize user_choice for scope
@@ -934,6 +958,7 @@ def main():
         print(f"   • Total posts processed: {len(scanner.scan_results.get('posts_data', []))}")
         print(f"   • Valid posts: {normal_posts_count}")
         print(f"   • Sponsored posts: {sponsored_posts_count}")
+        print(f"   • Vietnamese posts: {vietnamese_posts_count}")
         if hasattr(scanner, 'content_results') and scanner.content_results.get('posts_with_content', 0) > 0:
             print(f"   • Posts with content extracted: {scanner.content_results['posts_with_content']}")
 

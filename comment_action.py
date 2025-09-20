@@ -316,22 +316,18 @@ class LinkedInCommentAction(LinkedInCommentBot):
 
             time.sleep(0.5)
 
-            # Type character by character with human-like delays
+            # Type character by character with fast delays (under 2 seconds total)
             for i, char in enumerate(comment_text):
                 text_area.send_keys(char)
 
-                # Variable typing speed
-                if i % 10 == 0:  # Every 10 characters, pause longer
-                    time.sleep(random.uniform(0.2, 0.4))
+                # Optimized typing speed for 15-word comments
+                if i % 15 == 0:  # Every 15 characters, pause slightly longer
+                    time.sleep(random.uniform(0.05, 0.08))
                 else:
-                    time.sleep(random.uniform(0.05, 0.15))
-
-                # Occasional longer pauses (like thinking)
-                if random.random() < 0.1:  # 10% chance
-                    time.sleep(random.uniform(0.3, 0.7))
+                    time.sleep(random.uniform(0.01, 0.025))
 
             print("✅ Successfully typed comment")
-            time.sleep(1.0)  # Wait for UI to update
+            time.sleep(0.3)  # Quick wait for UI to update
 
             return True
 

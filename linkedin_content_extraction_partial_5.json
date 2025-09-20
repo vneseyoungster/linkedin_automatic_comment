@@ -1,0 +1,84 @@
+{
+  "extraction_timestamp": "2025-09-20T15:00:09.625746",
+  "total_posts_processed": 10,
+  "posts_with_content": 5,
+  "posts_with_read_more": 5,
+  "expansion_successful": 5,
+  "content_data": [
+    {
+      "ember_id": "ember42",
+      "has_read_more": true,
+      "content_expanded": true,
+      "content": "✨ What does it take to create a unicorn?\n\nNot just funding. Not just vision. But a system that combines both.\n\nThat’s what Mr. Sandeep(Sandipp) K Vij (Vijj) MBA - IIMA and his incredible team at Idea 2 Unicorn are building and their journey just got featured in Three60 Magazine. 🎉\n\nIn just 15 days, they help founders create a structured unicorn blueprint backed by:\n\n360° services for every stage of growth\n\nAccess to Pre-seed, Seed & Angel funding\n\nStrategic tie-ups with top incubators in India\n\n4 proprietary workshops through Angel Investor Networks\n\nA committed ₹7.5 Cr fund to fuel ambitious founders\n\nWith a team of visionary entrepreneurs, investors, AI experts, and global business leaders, they’re solving every business problem holistically, turning ideas into scalable unicorns.\n\n👏 Congratulations to Sandeep(Sandipp) and Team Idea 2 Unicorn on this milestone recognition. This is just the beginning of a movement to shape India’s startup ecosystem.\n\n👉 Read the full feature here: https://lnkd.in/dkT2PNGm",
+      "content_length": 1019,
+      "extraction_time": "2025-09-20T15:00:10.688077",
+      "selectors_used": [
+        ".fie-impression-container div[class*='biSBAHR'] > div > div"
+      ],
+      "errors": [],
+      "author_name": "Amit Verma",
+      "comment_posted": true,
+      "comment_text": "Incredible work, Sandeep and team! Excited to see how you empower founders with structured blueprints!"
+    },
+    {
+      "ember_id": "ember78",
+      "has_read_more": true,
+      "content_expanded": true,
+      "content": "Why do even top SDEs fail in DSA interviews? It’s not always lack of knowledge.\nIt’s the struggles nobody talks about\n.\n62% freeze the moment they see a tricky problem.\n71% fail to explain their approach clearly.\n48% miss edge cases even when they know the right pattern.\n\nSounds familiar? You’re not alone.\nEven experienced engineers face these struggles.\n\nNot because they are skipping practice but because they are skipping interview-specific practice\n\n🔴 Solving 500 problems, learning top 15 patterns, covering 3 DSA sheets → Practice.\n🟢 Solving problems & recognizing patterns under pressure → Interview-specific practice.\n\nBut how can you ACTUALLY do this kind of interview-specific practice? \nTry this FREE Leeco AI that I’ve been using for a while → https://lnkd.in/gHsrmY7y \n\nIt is an all-in-one AI that helps with every area of your interview prep:\n✅ Simulates real pressure and gives instant feedback through mocks.\n✅ Explains how to structure and communicate your approach.\n✅ Gives hints that guide you without giving away full solutions.\n\nInterviews aren’t just about coding. They test how you think under pressure, explain your logic, and handle corner cases and Leeco helps with ALL of it🚀\n\nConnect Swadesh Kumar \n\nComment \"DSA50\" & I'll DM you the PDF directly \n\nhashtag\n#dsa \nhashtag\n#dsastruggle \nhashtag\n#interviewprep \nhashtag\n#paidpartnership \nhashtag\n#tech \nhashtag\n#sde",
+      "content_length": 1392,
+      "extraction_time": "2025-09-20T15:00:56.542927",
+      "selectors_used": [
+        ".fie-impression-container div[class*='biSBAHR'] > div > div"
+      ],
+      "errors": [],
+      "author_name": "Swadesh Kumar",
+      "comment_posted": true,
+      "comment_text": "Great insights, Swadesh! Interview-specific practice is key—Leeco sounds like a game changer!"
+    },
+    {
+      "ember_id": "ember204",
+      "has_read_more": true,
+      "content_expanded": true,
+      "content": "𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞 & 𝐒𝐐𝐋 – 𝐓𝐡𝐞 𝐁𝐚𝐜𝐤𝐛𝐨𝐧𝐞 𝐨𝐟 𝐃𝐚𝐭𝐚 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭\n\n🔹 A 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞 is like a digital filing cabinet – an organized collection of data that can be easily accessed, managed, and updated.\n\nExample:-\n🔹In a , 𝐁𝐚𝐧𝐤 it stores customer details, account balances, and transactions.\n🔹In an 𝐄-𝐜𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐬𝐢𝐭𝐞, it stores products, orders, and customer reviews.\n\n\n🔹 𝐒𝐐𝐋 (𝐒𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞𝐝 𝐐𝐮𝐞𝐫𝐲 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞) is the standard language used to communicate with 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞𝐬. With SQL, you can:\n ✅ Create & manage databases and tables\n ✅ Insert, update, and delete records\n ✅ Retrieve useful information from data\n ✅ Control access and ensure security\n\n📌 𝐒𝐐𝐋 𝐄𝐱𝐚𝐦𝐩𝐥𝐞:-\n-- Fetch all customers from Delhi\nSELECT * FROM Customers\nWHERE City = 'Delhi';\n\n-- Add a new customer\nINSERT INTO Customers (CustomerID, Name, City)\nVALUES (4, 'Anita', 'Bangalore');\n\n👉 𝐈𝐧 𝐬𝐡𝐨𝐫𝐭:\n𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞 = Where data lives 🗄️\n𝐒𝐐𝐋 = The language to interact with it 💬\n\n💡 Mastering SQL is the first step toward becoming a skilled Data Analyst or Data Scientist.\n\n👉Follow Go Online Trainings, Bhaskar Jogi, Beethi Bixapathi more insights and content on DA\n\nhashtag\n#DataScience \nhashtag\n#SQL \nhashtag\n#Database \nhashtag\n#DataAnalytics \nhashtag\n#Learning",
+      "content_length": 1196,
+      "extraction_time": "2025-09-20T15:01:37.699669",
+      "selectors_used": [
+        ".fie-impression-container div[class*='biSBAHR'] > div > div"
+      ],
+      "errors": [],
+      "author_name": "Go Online Trainings",
+      "comment_posted": true,
+      "comment_text": "Great breakdown of SQL and databases! Mastering these skills truly opens doors in data management."
+    },
+    {
+      "ember_id": "ember210",
+      "has_read_more": true,
+      "content_expanded": true,
+      "content": "He spent more than 50 years building one of India’s largest private libraries.\n\nAnke Gowda, a 75-year-old from a small village in Karnataka, gave up comforts and even sold his home just to collect books.\n\nAnd the most special thing is there are no fees, no memberships. \n\nAnyone from a schoolchild to a Supreme Court judge can step in and read.\n\nHe lives inside the library itself, with his family standing by his mission.\n\nAnke Gowda sets the example that the legacy is not in money or power only, but in knowledge that lights the path for generations.",
+      "content_length": 553,
+      "extraction_time": "2025-09-20T15:02:20.770489",
+      "selectors_used": [
+        ".fie-impression-container div[class*='biSBAHR'] > div > div"
+      ],
+      "errors": [],
+      "author_name": "Mohit Sardana",
+      "comment_posted": false,
+      "comment_error": "Posting failed"
+    },
+    {
+      "ember_id": "ember213",
+      "has_read_more": true,
+      "content_expanded": true,
+      "content": "Microsoft gives 45+ LPA opportunities each year & anyone can take it.\nAmazon gives around 50+ LPA opportunities each year & anyone can take it.\nUber, Stripe, give 45-50+ LPA opportunities each year & anyone can take it. \n\nIf they get past the 1st DSA round and then actually participate in the interview process, a lot of good people miss out on this chance, and I will tell you why..\n\nBecause a 45-60 minute round, with 2 tricky problems (you won’t find anywhere on the internet) tests you in the 1st round. \n\nYes, 90-95% of these questions are always new, go to any company from Uber to Google to Goldman Sachs to Microsoft. \n\nSo, you can’t read old questions and think it’s easy.\nSo, you can’t memorize your way out of it\nSo, you can’t cheat your way out of it\n\nOne of the best strategies, which is honest, that will work with your hard work is learning DSA pattern-based. \n\nAnd that’s exactly why I want to recommend this DSA pattern product; it completely changes the way you prepare.\n\nLink:: https://lnkd.in/gMsRNnYh\n\n- help you track and learn the clues and triggers of different patterns\n- provide AI-based doubt solving + space to add your own notes\n- solve 250+ good problems with 5 problems each on 50 patterns\n- train you on every scenario, so you can solve unseen problems.",
+      "content_length": 1286,
+      "extraction_time": "2025-09-20T15:02:56.995111",
+      "selectors_used": [
+        ".fie-impression-container div[class*='biSBAHR'] > div > div"
+      ],
+      "errors": [],
+      "author_name": "Neha Jain",
+      "comment_posted": true,
+      "comment_text": "Great insights, Neha! Mastering DSA patterns is essential to tackle those tricky interview questions."
+    }
+  ]
+}
