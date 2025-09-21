@@ -1,120 +1,128 @@
 {
-  "scan_timestamp": "2025-09-20T16:28:05.735202",
+  "scan_timestamp": "2025-09-21T15:47:08.551841",
   "posts_data": [
     {
-      "ember_id": "ember26",
-      "author_name": "Quy Nguyen",
+      "ember_id": "ember25",
+      "author_name": "Yuxin Zhu",
       "is_sponsored": true,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember49",
-      "author_name": "Quy Nguyen",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember84",
-      "author_name": "Thành Vinh Holdings",
-      "is_sponsored": true,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember89",
-      "author_name": "Thành Vinh Holdings",
-      "is_sponsored": true,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember181",
-      "author_name": "Anshul Chhabra",
+      "ember_id": "ember48",
+      "author_name": "Yuxin Zhu",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember270",
-      "author_name": "Anshul Chhabra",
+      "ember_id": "ember83",
+      "author_name": "New Energy Nexus",
+      "is_sponsored": true,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "sponsored"
+    },
+    {
+      "ember_id": "ember116",
+      "author_name": "New Energy Nexus",
+      "is_sponsored": true,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "sponsored"
+    },
+    {
+      "ember_id": "ember86",
+      "author_name": "Abel Lee",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember184",
-      "author_name": "Trinh Nguyen",
+      "ember_id": "ember152",
+      "author_name": "Abel Lee",
       "is_sponsored": false,
-      "is_vietnamese": true,
+      "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember216",
+      "author_name": "Eric Roby",
+      "is_sponsored": false,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
     },
     {
       "ember_id": "ember233",
-      "author_name": "Trinh Nguyen",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember187",
-      "author_name": "Eric Sim",
-      "is_sponsored": true,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember201",
-      "author_name": "Eric Sim",
-      "is_sponsored": true,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember190",
-      "author_name": "Hưng Huỳnh",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember319",
-      "author_name": "Hưng Huỳnh",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember193",
-      "author_name": "Vinh Duong",
+      "author_name": "Eric Roby",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember367",
-      "author_name": "Vinh Duong",
+      "ember_id": "ember219",
+      "author_name": "Anshul Chhabra",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember199",
+      "ember_id": "ember323",
+      "author_name": "Anshul Chhabra",
+      "is_sponsored": false,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember222",
+      "author_name": "Maxava",
+      "is_sponsored": true,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "sponsored"
+    },
+    {
+      "ember_id": "ember269",
+      "author_name": "Maxava",
+      "is_sponsored": true,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "sponsored"
+    },
+    {
+      "ember_id": "ember225",
+      "author_name": "Ruby Nguyen",
+      "is_sponsored": false,
+      "is_vietnamese": true,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "vietnamese"
+    },
+    {
+      "ember_id": "ember352",
+      "author_name": "Ruby Nguyen",
+      "is_sponsored": false,
+      "is_vietnamese": true,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "vietnamese"
+    },
+    {
+      "ember_id": "ember231",
+      "author_name": "TopCV Vietnam",
+      "is_sponsored": true,
+      "is_vietnamese": true,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "sponsored"
+    },
+    {
+      "ember_id": "ember418",
       "author_name": "TopCV Vietnam",
       "is_sponsored": true,
       "is_vietnamese": true,
@@ -123,110 +131,38 @@
     },
     {
       "ember_id": "ember454",
-      "author_name": "TopCV Vietnam",
-      "is_sponsored": true,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember425",
-      "author_name": "David Mao",
+      "author_name": "Jeena George",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember485",
-      "author_name": "David Mao",
+      "ember_id": "ember583",
+      "author_name": "Jeena George",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember428",
-      "author_name": "Kieu Hoang",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember581",
-      "author_name": "Kieu Hoang",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember434",
-      "author_name": "Blazeup AI",
-      "is_sponsored": true,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember549",
-      "author_name": "Blazeup AI",
-      "is_sponsored": true,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember437",
-      "author_name": "Zuhayeer Musa",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember746",
-      "author_name": "Zuhayeer Musa",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember440",
-      "author_name": "Thien D",
+      "ember_id": "ember457",
+      "author_name": "Raymond Yeh",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember670",
-      "author_name": "Thien D",
+      "ember_id": "ember481",
+      "author_name": "Raymond Yeh",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember443",
-      "author_name": "Luu Ky Nam, Executive Coach",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember620",
-      "author_name": "Luu Ky Nam, Executive Coach",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember446",
+      "ember_id": "ember460",
       "author_name": "Galaxy Holdings",
       "is_sponsored": true,
       "is_vietnamese": false,
@@ -234,7 +170,7 @@
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember796",
+      "ember_id": "ember745",
       "author_name": "Galaxy Holdings",
       "is_sponsored": true,
       "is_vietnamese": false,
@@ -242,160 +178,152 @@
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember449",
-      "author_name": "Bryan Finster",
+      "ember_id": "ember463",
+      "author_name": "Edmund Cuthbert",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember698",
-      "author_name": "Bryan Finster",
+      "ember_id": "ember677",
+      "author_name": "Edmund Cuthbert",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember452",
-      "author_name": "Trang Le (JANE)",
+      "ember_id": "ember466",
+      "author_name": "Anh Nguyen",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember837",
-      "author_name": "Trang Le (JANE)",
+      "ember_id": "ember786",
+      "author_name": "Anh Nguyen",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember876",
-      "author_name": "Intuit QuickBooks",
+      "ember_id": "ember469",
+      "author_name": "Thang Tham (Thomas)",
+      "is_sponsored": false,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember614",
+      "author_name": "Thang Tham (Thomas)",
+      "is_sponsored": false,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember472",
+      "author_name": "T-Global Technology Co., Ltd.",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember1089",
-      "author_name": "Intuit QuickBooks",
+      "ember_id": "ember645",
+      "author_name": "T-Global Technology Co., Ltd.",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember879",
-      "author_name": "Chan Nguyen",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember1154",
-      "author_name": "Chan Nguyen",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember882",
-      "author_name": "Neha Rani",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember999",
-      "author_name": "Neha Rani",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember885",
-      "author_name": "Joyce Nguyen",
+      "ember_id": "ember475",
+      "author_name": "Hieu Van",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     },
     {
-      "ember_id": "ember1059",
-      "author_name": "Joyce Nguyen",
+      "ember_id": "ember511",
+      "author_name": "Hieu Van",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     },
     {
-      "ember_id": "ember888",
-      "author_name": "MMA Global Vietnam",
+      "ember_id": "ember478",
+      "author_name": "Finviet Technology",
+      "is_sponsored": false,
+      "is_vietnamese": true,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "vietnamese"
+    },
+    {
+      "ember_id": "ember545",
+      "author_name": "Finviet Technology",
+      "is_sponsored": false,
+      "is_vietnamese": true,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "vietnamese"
+    },
+    {
+      "ember_id": "ember836",
+      "author_name": "S&P Global Market Intelligence",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember903",
-      "author_name": "MMA Global Vietnam",
+      "ember_id": "ember1114",
+      "author_name": "S&P Global Market Intelligence",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember891",
-      "author_name": "Khanh Dao",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember1031",
-      "author_name": "Khanh Dao",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember894",
-      "author_name": "Nhan Ho Thien",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember935",
-      "author_name": "Nhan Ho Thien",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember897",
-      "author_name": "Tam Ngo",
+      "ember_id": "ember839",
+      "author_name": "Duncan Maddox",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember1118",
-      "author_name": "Tam Ngo",
+      "ember_id": "ember1013",
+      "author_name": "Duncan Maddox",
+      "is_sponsored": false,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember842",
+      "author_name": "Aromal S",
+      "is_sponsored": false,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember981",
+      "author_name": "Aromal S",
+      "is_sponsored": false,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember845",
+      "author_name": "Daniel Abrahams",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
@@ -403,168 +331,136 @@
     },
     {
       "ember_id": "ember900",
-      "author_name": "AIG",
+      "author_name": "Daniel Abrahams",
+      "is_sponsored": false,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember848",
+      "author_name": "UOB",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember967",
-      "author_name": "AIG",
+      "ember_id": "ember863",
+      "author_name": "UOB",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember1189",
-      "author_name": "Anton Martyniuk",
+      "ember_id": "ember851",
+      "author_name": "Minh Nguyen",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember1441",
-      "author_name": "Anton Martyniuk",
+      "ember_id": "ember952",
+      "author_name": "Minh Nguyen",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember1192",
-      "author_name": "Danny To",
+      "ember_id": "ember854",
+      "author_name": "Eric Roby",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     },
     {
-      "ember_id": "ember1216",
-      "author_name": "Danny To",
+      "ember_id": "ember1179",
+      "author_name": "Eric Roby",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     },
     {
-      "ember_id": "ember1195",
-      "author_name": "The Climate Pledge",
+      "ember_id": "ember857",
+      "author_name": "Harvey Tran",
+      "is_sponsored": false,
+      "is_vietnamese": true,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "vietnamese"
+    },
+    {
+      "ember_id": "ember1083",
+      "author_name": "Harvey Tran",
+      "is_sponsored": false,
+      "is_vietnamese": true,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "vietnamese"
+    },
+    {
+      "ember_id": "ember860",
+      "author_name": "Grab For Business",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember1281",
-      "author_name": "The Climate Pledge",
+      "ember_id": "ember1150",
+      "author_name": "Grab For Business",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember1198",
-      "author_name": "George Odipoh",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember1407",
-      "author_name": "George Odipoh",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember1201",
-      "author_name": "Ryan Nguyen",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember1505",
-      "author_name": "Ryan Nguyen",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember1204",
-      "author_name": "Ninh Tran",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember1475",
-      "author_name": "Ninh Tran",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember1207",
-      "author_name": "CapitaLand Vietnam",
-      "is_sponsored": true,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember1252",
-      "author_name": "CapitaLand Vietnam",
-      "is_sponsored": true,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember1210",
-      "author_name": "Brian Bui",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember1371",
-      "author_name": "Brian Bui",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember1213",
-      "author_name": "Eric Yeo",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember1313",
-      "author_name": "Eric Yeo",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
     }
   ],
   "normal_posts": [
     {
-      "ember_id": "ember181",
+      "ember_id": "ember48",
+      "author_name": "Yuxin Zhu",
+      "is_sponsored": false,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember86",
+      "author_name": "Abel Lee",
+      "is_sponsored": false,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember152",
+      "author_name": "Abel Lee",
+      "is_sponsored": false,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember216",
+      "author_name": "Eric Roby",
+      "is_sponsored": false,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember233",
+      "author_name": "Eric Roby",
+      "is_sponsored": false,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "normal"
+    },
+    {
+      "ember_id": "ember219",
       "author_name": "Anshul Chhabra",
       "is_sponsored": false,
       "is_vietnamese": false,
@@ -572,7 +468,7 @@
       "post_type": "normal"
     },
     {
-      "ember_id": "ember270",
+      "ember_id": "ember323",
       "author_name": "Anshul Chhabra",
       "is_sponsored": false,
       "is_vietnamese": false,
@@ -580,192 +476,144 @@
       "post_type": "normal"
     },
     {
-      "ember_id": "ember193",
-      "author_name": "Vinh Duong",
+      "ember_id": "ember454",
+      "author_name": "Jeena George",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember367",
-      "author_name": "Vinh Duong",
+      "ember_id": "ember583",
+      "author_name": "Jeena George",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember425",
-      "author_name": "David Mao",
+      "ember_id": "ember457",
+      "author_name": "Raymond Yeh",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember485",
-      "author_name": "David Mao",
+      "ember_id": "ember481",
+      "author_name": "Raymond Yeh",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember440",
-      "author_name": "Thien D",
+      "ember_id": "ember463",
+      "author_name": "Edmund Cuthbert",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember670",
-      "author_name": "Thien D",
+      "ember_id": "ember677",
+      "author_name": "Edmund Cuthbert",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember449",
-      "author_name": "Bryan Finster",
+      "ember_id": "ember466",
+      "author_name": "Anh Nguyen",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember698",
-      "author_name": "Bryan Finster",
+      "ember_id": "ember786",
+      "author_name": "Anh Nguyen",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember452",
-      "author_name": "Trang Le (JANE)",
+      "ember_id": "ember469",
+      "author_name": "Thang Tham (Thomas)",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember837",
-      "author_name": "Trang Le (JANE)",
+      "ember_id": "ember614",
+      "author_name": "Thang Tham (Thomas)",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember879",
-      "author_name": "Chan Nguyen",
+      "ember_id": "ember839",
+      "author_name": "Duncan Maddox",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember1154",
-      "author_name": "Chan Nguyen",
+      "ember_id": "ember1013",
+      "author_name": "Duncan Maddox",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember882",
-      "author_name": "Neha Rani",
+      "ember_id": "ember842",
+      "author_name": "Aromal S",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember999",
-      "author_name": "Neha Rani",
+      "ember_id": "ember981",
+      "author_name": "Aromal S",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember897",
-      "author_name": "Tam Ngo",
+      "ember_id": "ember845",
+      "author_name": "Daniel Abrahams",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember1118",
-      "author_name": "Tam Ngo",
+      "ember_id": "ember900",
+      "author_name": "Daniel Abrahams",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember1189",
-      "author_name": "Anton Martyniuk",
+      "ember_id": "ember851",
+      "author_name": "Minh Nguyen",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "normal"
     },
     {
-      "ember_id": "ember1441",
-      "author_name": "Anton Martyniuk",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember1198",
-      "author_name": "George Odipoh",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember1407",
-      "author_name": "George Odipoh",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember1201",
-      "author_name": "Ryan Nguyen",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember1505",
-      "author_name": "Ryan Nguyen",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember1213",
-      "author_name": "Eric Yeo",
-      "is_sponsored": false,
-      "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "normal"
-    },
-    {
-      "ember_id": "ember1313",
-      "author_name": "Eric Yeo",
+      "ember_id": "ember952",
+      "author_name": "Minh Nguyen",
       "is_sponsored": false,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
@@ -774,47 +622,47 @@
   ],
   "sponsored_posts": [
     {
-      "ember_id": "ember26",
-      "author_name": "Quy Nguyen",
+      "ember_id": "ember25",
+      "author_name": "Yuxin Zhu",
       "is_sponsored": true,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember84",
-      "author_name": "Thành Vinh Holdings",
-      "is_sponsored": true,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember89",
-      "author_name": "Thành Vinh Holdings",
-      "is_sponsored": true,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember187",
-      "author_name": "Eric Sim",
+      "ember_id": "ember83",
+      "author_name": "New Energy Nexus",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember201",
-      "author_name": "Eric Sim",
+      "ember_id": "ember116",
+      "author_name": "New Energy Nexus",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember199",
+      "ember_id": "ember222",
+      "author_name": "Maxava",
+      "is_sponsored": true,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "sponsored"
+    },
+    {
+      "ember_id": "ember269",
+      "author_name": "Maxava",
+      "is_sponsored": true,
+      "is_vietnamese": false,
+      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
+      "post_type": "sponsored"
+    },
+    {
+      "ember_id": "ember231",
       "author_name": "TopCV Vietnam",
       "is_sponsored": true,
       "is_vietnamese": true,
@@ -822,7 +670,7 @@
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember454",
+      "ember_id": "ember418",
       "author_name": "TopCV Vietnam",
       "is_sponsored": true,
       "is_vietnamese": true,
@@ -830,23 +678,7 @@
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember434",
-      "author_name": "Blazeup AI",
-      "is_sponsored": true,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember549",
-      "author_name": "Blazeup AI",
-      "is_sponsored": true,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember446",
+      "ember_id": "ember460",
       "author_name": "Galaxy Holdings",
       "is_sponsored": true,
       "is_vietnamese": false,
@@ -854,7 +686,7 @@
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember796",
+      "ember_id": "ember745",
       "author_name": "Galaxy Holdings",
       "is_sponsored": true,
       "is_vietnamese": false,
@@ -862,280 +694,160 @@
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember876",
-      "author_name": "Intuit QuickBooks",
+      "ember_id": "ember472",
+      "author_name": "T-Global Technology Co., Ltd.",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember1089",
-      "author_name": "Intuit QuickBooks",
+      "ember_id": "ember645",
+      "author_name": "T-Global Technology Co., Ltd.",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember888",
-      "author_name": "MMA Global Vietnam",
+      "ember_id": "ember836",
+      "author_name": "S&P Global Market Intelligence",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember903",
-      "author_name": "MMA Global Vietnam",
+      "ember_id": "ember1114",
+      "author_name": "S&P Global Market Intelligence",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember900",
-      "author_name": "AIG",
+      "ember_id": "ember848",
+      "author_name": "UOB",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember967",
-      "author_name": "AIG",
+      "ember_id": "ember863",
+      "author_name": "UOB",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember1195",
-      "author_name": "The Climate Pledge",
+      "ember_id": "ember860",
+      "author_name": "Grab For Business",
       "is_sponsored": true,
       "is_vietnamese": false,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     },
     {
-      "ember_id": "ember1281",
-      "author_name": "The Climate Pledge",
+      "ember_id": "ember1150",
+      "author_name": "Grab For Business",
       "is_sponsored": true,
       "is_vietnamese": false,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember1207",
-      "author_name": "CapitaLand Vietnam",
-      "is_sponsored": true,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "sponsored"
-    },
-    {
-      "ember_id": "ember1252",
-      "author_name": "CapitaLand Vietnam",
-      "is_sponsored": true,
-      "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "sponsored"
     }
   ],
   "vietnamese_posts": [
     {
-      "ember_id": "ember49",
-      "author_name": "Quy Nguyen",
+      "ember_id": "ember225",
+      "author_name": "Ruby Nguyen",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     },
     {
-      "ember_id": "ember184",
-      "author_name": "Trinh Nguyen",
+      "ember_id": "ember352",
+      "author_name": "Ruby Nguyen",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     },
     {
-      "ember_id": "ember233",
-      "author_name": "Trinh Nguyen",
+      "ember_id": "ember475",
+      "author_name": "Hieu Van",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     },
     {
-      "ember_id": "ember190",
-      "author_name": "Hưng Huỳnh",
+      "ember_id": "ember511",
+      "author_name": "Hieu Van",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     },
     {
-      "ember_id": "ember319",
-      "author_name": "Hưng Huỳnh",
+      "ember_id": "ember478",
+      "author_name": "Finviet Technology",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     },
     {
-      "ember_id": "ember428",
-      "author_name": "Kieu Hoang",
+      "ember_id": "ember545",
+      "author_name": "Finviet Technology",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     },
     {
-      "ember_id": "ember581",
-      "author_name": "Kieu Hoang",
+      "ember_id": "ember854",
+      "author_name": "Eric Roby",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     },
     {
-      "ember_id": "ember437",
-      "author_name": "Zuhayeer Musa",
+      "ember_id": "ember1179",
+      "author_name": "Eric Roby",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     },
     {
-      "ember_id": "ember746",
-      "author_name": "Zuhayeer Musa",
+      "ember_id": "ember857",
+      "author_name": "Harvey Tran",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     },
     {
-      "ember_id": "ember443",
-      "author_name": "Luu Ky Nam, Executive Coach",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember620",
-      "author_name": "Luu Ky Nam, Executive Coach",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember885",
-      "author_name": "Joyce Nguyen",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember1059",
-      "author_name": "Joyce Nguyen",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember891",
-      "author_name": "Khanh Dao",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember1031",
-      "author_name": "Khanh Dao",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember894",
-      "author_name": "Nhan Ho Thien",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember935",
-      "author_name": "Nhan Ho Thien",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember1192",
-      "author_name": "Danny To",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember1216",
-      "author_name": "Danny To",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember1204",
-      "author_name": "Ninh Tran",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember1475",
-      "author_name": "Ninh Tran",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember1210",
-      "author_name": "Brian Bui",
-      "is_sponsored": false,
-      "is_vietnamese": true,
-      "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
-      "post_type": "vietnamese"
-    },
-    {
-      "ember_id": "ember1371",
-      "author_name": "Brian Bui",
+      "ember_id": "ember1083",
+      "author_name": "Harvey Tran",
       "is_sponsored": false,
       "is_vietnamese": true,
       "selector_used": ".update-components-actor__title span.hoverable-link-text span span:first-child",
       "post_type": "vietnamese"
     }
   ],
-  "ember_elements_found": 1175,
+  "ember_elements_found": 935,
   "scan_summary": {
-    "total_ember_elements": 1175,
-    "total_posts_processed": 70,
-    "total_posts_with_authors": 70,
-    "normal_posts_count": 26,
-    "sponsored_posts_count": 21,
-    "vietnamese_posts_count": 23,
-    "unique_authors_count": 35
+    "total_ember_elements": 935,
+    "total_posts_processed": 52,
+    "total_posts_with_authors": 52,
+    "normal_posts_count": 25,
+    "sponsored_posts_count": 17,
+    "vietnamese_posts_count": 10,
+    "unique_authors_count": 25
   }
 }

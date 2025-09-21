@@ -17,7 +17,7 @@ XPath_1 : //*[@id="feed-shared-social-action-bar-comment-ember60"]/span
 XPath_2: //*[@id="feed-shared-social-action-bar-comment-ember60"]
 
 People's Comment:
-Selector_1: #translation-container-ember250 > div > span > div
+Selector_1: #translation-container-ember1163 > div > span > div > span
 XPath_1: //*[@id="translation-container-ember250"]/div/span/div
 
 Texting Area:
@@ -34,3 +34,4 @@ Element: <button id="ember300" class="comments-comment-box__submit-button--cr ar
 <span class="artdeco-button__text">
     Comment
 </span></button>
+

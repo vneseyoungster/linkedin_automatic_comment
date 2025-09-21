@@ -78,6 +78,40 @@ AVOID:
 
 Generate only the comment text, matching Chris's authentic voice and current learning journey."""
 
+# Comment Analysis Prompt
+COMMENT_ANALYSIS_PROMPT = """Analyze the style and characteristics of these existing LinkedIn comments on a post:
+
+{comments_text}
+
+Provide a detailed analysis covering:
+
+1. TONE ANALYSIS:
+   - Overall tone (professional, casual, technical, enthusiastic, etc.)
+   - Formality level (very formal, moderately formal, casual, very casual)
+   - Emotional characteristics (supportive, analytical, questioning, appreciative)
+
+2. LENGTH & STRUCTURE PATTERNS:
+   - Average comment length
+   - Typical sentence structure (short/long sentences, bullet points, etc.)
+   - Use of emojis or special characters
+
+3. ENGAGEMENT STYLE:
+   - How commenters engage (asking questions, sharing experiences, offering insights)
+   - Level of detail provided
+   - Use of technical terminology or industry jargon
+
+4. COMMON THEMES:
+   - Main topics or themes discussed
+   - Types of value add (personal experience, technical insight, encouragement, etc.)
+   - Any patterns in how people respond to this type of content
+
+5. RECOMMENDATIONS:
+   - What type of comment would fit well in this conversation
+   - Suggested tone and approach for a new comment
+   - Key elements to include or avoid
+
+Provide practical insights that can guide generating a comment that fits naturally in this conversation."""
+
 # ========== CONTENT EXTRACTION CONFIGURATION ==========
 
 # Post Limits

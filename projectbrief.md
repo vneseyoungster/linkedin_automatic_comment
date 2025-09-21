@@ -94,14 +94,18 @@ This project provides automated LinkedIn content scanning and comment automation
 **Main Class**: `LinkedInComprehensiveScanner` (inherits from `LinkedInCommentBot`)
 **Functions**:
 - `is_promoted_post()` - Sponsor detection (from sponsor scanner)
+- `is_vietnamese_post()` - Vietnamese language post detection
 - `extract_author_name()` - Author extraction (from content loader)
 - `scroll_to_bottom()` - Smart scrolling to load all content
 - `scan_all_posts()` - **Main comprehensive scanning function**
-- `extract_content_from_valid_posts()` - Content extraction with Read More handling
+- `extract_post_content()` - Extract full post content with Read More expansion handling
+- `extract_comment_content()` - **NEW**: Extract existing comments from posts for analysis
+- `analysis_previous_comment()` - **NEW**: AI-powered analysis of existing comment styles and patterns
+- `generate_comment_by_llm()` - **ENHANCED**: Generate contextual comments using post content AND comment analysis
+- `extract_content_from_valid_posts()` - Content extraction with integrated commenting
 - `save_results_to_json()` - Save complete scan results
-- `print_comprehensive_results()` - Display detailed formatted results
 
-**Purpose**: **Complete three-stage workflow** that combines post discovery, duplicate cleanup, content extraction, and automated commenting into a unified experience.
+**Purpose**: **Complete integrated workflow** that combines post discovery, content extraction, comment analysis, and contextually-aware automated commenting into a unified experience.
 
 ### Configuration Files
 
@@ -111,9 +115,12 @@ This project provides automated LinkedIn content scanning and comment automation
 - `COMMENTS_PER_RUN` - Number of comments per session (default: 1)
 - `MIN_WAIT_TIME` / `MAX_WAIT_TIME` - Wait times between comments
 - `MAX_POST_AGE_DAYS` - Skip posts older than X days
-- `COMMENT_PROMPT` - Template for AI comment generation
+- `COMMENT_PROMPT` - Template for AI comment generation with Chris's authentic voice
+- `COMMENT_ANALYSIS_PROMPT` - **NEW**: Template for analyzing existing comment styles and patterns
+- Content extraction settings (delays, limits, filtering options)
+- Auto-commenting configuration (delays, session limits)
 
-**Purpose**: Central configuration for all automation settings and API keys.
+**Purpose**: Central configuration for all automation settings, AI prompts, and API keys.
 
 #### `main.py`
 **Status**: Existing file (not documented in current implementation)
@@ -135,16 +142,20 @@ python test.py
 
 2. **Stage 2: Content Extraction & Integrated Commenting (Optional)**
    - Extracts content from each valid post
+   - **Opens comment sections and analyzes existing comments**
+   - **AI-powered comment style analysis** for conversation context
    - **Immediately comments on each post after extraction** (if enabled)
-   - Uses contextual comment generation based on post content
+   - Uses contextual comment generation based on BOTH post content AND existing comment patterns
    - Handles Read More button expansion
    - Saves combined results to `linkedin_content_extraction.json`
 
 **Key Benefits:**
 - ✅ Comments are posted immediately after reading content (better context)
+- ✅ **NEW**: Comments match existing conversation style and tone
+- ✅ **NEW**: AI analyzes existing comments for better engagement
 - ✅ No redundant post lookups
 - ✅ Faster overall execution
-- ✅ Contextual comments based on extracted content
+- ✅ Contextual comments based on extracted content AND conversation patterns
 
 ### Option 2: Standalone Comment Posting
 ```bash
@@ -209,7 +220,9 @@ python linkedin_sponsor_scanner.py
 ### 📊 Content Analysis & Automation
 - **Integrated Two-Stage Workflow**: Streamlined automation with immediate commenting after content extraction
 - **Duplicate Author Cleanup**: Automatic removal of duplicate posts from same authors
-- **Contextual Comment Generation**: AI-powered comments based on post content analysis
+- **AI-Powered Comment Analysis**: **NEW** - Analyzes existing comments to understand conversation patterns and tone
+- **Contextual Comment Generation**: AI-powered comments based on post content AND existing comment style analysis
+- **Conversation-Aware Commenting**: **NEW** - Generated comments naturally fit existing conversation style
 - **Immediate Post-Extraction Commenting**: Comments posted right after reading content for better context
 - **Targeted Comment Posting**: Post comments to specific posts using ember IDs
 - **7-Step Comment Flow**: Complete automation of LinkedIn's comment posting process
@@ -217,6 +230,7 @@ python linkedin_sponsor_scanner.py
 - **Full Post Content Extraction**: Advanced content extraction with Read More button handling
 - **Author Extraction**: Multiple CSS selector strategies for robust author detection
 - **Sponsor Detection**: Identifies promoted/sponsored content
+- **Vietnamese Post Detection**: **NEW** - Identifies and filters Vietnamese language posts
 - **Ember Element Scanning**: Works with LinkedIn's dynamic Ember.js framework
 - **Smart Scrolling**: Automatically loads all available content
 - **Read More Expansion**: Automatically clicks and expands truncated posts for full content
@@ -237,15 +251,19 @@ python linkedin_sponsor_scanner.py
 
 The complete integrated two-stage automation system is now fully implemented and ready for production use:
 
-1. ✅ **Post Discovery & Classification** - Complete with author extraction and sponsor detection
+1. ✅ **Post Discovery & Classification** - Complete with author extraction, sponsor detection, and Vietnamese filtering
 2. ✅ **Duplicate Author Cleanup** - Automatic cleaning with multiple strategies (keep_first_normal, etc.)
 3. ✅ **Integrated Content Extraction & Commenting** - Streamlined workflow with immediate commenting
-4. ✅ **Contextual Comment Generation** - AI-powered comments based on post content analysis
-5. ✅ **Human-like Behavior** - Natural typing patterns, intelligent delays, and anti-detection
-6. ✅ **Comprehensive Error Handling** - Fallback strategies and detailed verification
-7. ✅ **Data Export & Reporting** - JSON exports with detailed statistics and cleanup reports
+4. ✅ **AI-Powered Comment Analysis** - **NEW** - Analyzes existing comments for conversation context
+5. ✅ **Conversation-Aware Comment Generation** - **NEW** - AI comments that match existing conversation style
+6. ✅ **Contextual Comment Generation** - AI-powered comments based on post content AND comment analysis
+7. ✅ **Human-like Behavior** - Natural typing patterns, intelligent delays, and anti-detection
+8. ✅ **Comprehensive Error Handling** - Fallback strategies and detailed verification
+9. ✅ **Data Export & Reporting** - JSON exports with detailed statistics and cleanup reports
 
 ### Advanced Features Ready:
+- **Comment Style Analysis**: **NEW** - AI analyzes existing comments for tone, length, engagement patterns
+- **Conversation Context Awareness**: **NEW** - Comments naturally fit existing discussion style
 - **Immediate Comment After Extraction**: Comments posted right after reading content for better context
 - **Multiple Cleanup Strategies**: keep_first_normal, keep_first_occurrence, keep_normal_only, keep_latest_ember
 - **Content-Based Comment Templates**: Different comment styles for achievements, career posts, tips, questions, etc.

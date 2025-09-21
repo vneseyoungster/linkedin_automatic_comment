@@ -251,66 +251,6 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
         except Exception as e:
             print(f"❌ Error saving results: {e}")
 
-    def print_comprehensive_results(self):
-        """
-        Print a detailed summary of the comprehensive scan results
-        """
-        print("\n" + "="*80)
-        print("🔍 LINKEDIN COMPREHENSIVE SCAN RESULTS")
-        print("="*80)
-
-        summary = self.scan_results["scan_summary"]
-        print(f"📊 Total Ember elements found: {summary['total_ember_elements']}")
-        print(f"📝 Total posts processed: {summary['total_posts_processed']}")
-        print(f"👥 Posts with authors found: {summary['total_posts_with_authors']}")
-        print(f"📄 Normal posts: {summary['normal_posts_count']}")
-        print(f"📢 Sponsored posts: {summary['sponsored_posts_count']}")
-        print(f"🇻🇳 Vietnamese posts: {summary['vietnamese_posts_count']}")
-        print(f"👤 Unique authors: {summary['unique_authors_count']}")
-
-        # Show normal posts
-        print(f"\n📄 NORMAL POSTS ({len(self.scan_results['normal_posts'])} found):")
-        print("-" * 60)
-        for i, post in enumerate(self.scan_results["normal_posts"][:10], 1):  # Show first 10
-            print(f"{i}. {post['author_name']} (Ember ID: {post['ember_id']})")
-
-        if len(self.scan_results["normal_posts"]) > 10:
-            print(f"... and {len(self.scan_results['normal_posts']) - 10} more normal posts")
-
-        # Show sponsored posts
-        print(f"\n📢 SPONSORED POSTS ({len(self.scan_results['sponsored_posts'])} found):")
-        print("-" * 60)
-        if self.scan_results["sponsored_posts"]:
-            for i, post in enumerate(self.scan_results["sponsored_posts"], 1):
-                print(f"{i}. {post['author_name']} (Ember ID: {post['ember_id']})")
-        else:
-            print("No sponsored posts found")
-
-        # Show Vietnamese posts
-        print(f"\n🇻🇳 VIETNAMESE POSTS ({len(self.scan_results['vietnamese_posts'])} found):")
-        print("-" * 60)
-        if self.scan_results["vietnamese_posts"]:
-            for i, post in enumerate(self.scan_results["vietnamese_posts"], 1):
-                print(f"{i}. {post['author_name']} (Ember ID: {post['ember_id']})")
-        else:
-            print("No Vietnamese posts found")
-
-        # Show all unique authors
-        print(f"\n👥 UNIQUE AUTHORS ({summary['unique_authors_count']} found):")
-        print("-" * 60)
-        unique_authors = set()
-        for post in self.scan_results["posts_data"]:
-            if post["author_name"] and post["author_name"] not in unique_authors:
-                unique_authors.add(post["author_name"])
-                if post["is_sponsored"]:
-                    post_type = "📢 Sponsored"
-                elif post.get("is_vietnamese", False):
-                    post_type = "🇻🇳 Vietnamese"
-                else:
-                    post_type = "📄 Normal"
-                print(f"• {post['author_name']} - {post_type}")
-
-        print("="*80)
 
     def find_read_more_button(self, post_element):
         """
@@ -439,9 +379,127 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
 
         return content_data
 
-    def generate_comment_by_llm(self, post_content, author_name):
+    def extract_comment_content(self, post_element, ember_id):
         """
-        Generate contextual comments using OpenAI LLM based on post content
+        Extract existing comments from a specific post for analysis
+        """
+        comment_data = {
+            "ember_id": ember_id,
+            "comments_found": 0,
+            "comments": [],
+            "extraction_time": datetime.now().isoformat(),
+            "selectors_used": [],
+            "errors": []
+        }
+
+        try:
+            print(f"🔍 Extracting existing comments from post: {ember_id}")
+
+            # Comment selectors - updated based on actual LinkedIn structure
+            # Comments only appear after clicking the comment button to open comment section
+            comment_selectors = [
+                # Primary selector - the working pattern you found
+                "[id^='translation-container-ember'] > div > span > div",
+                # Secondary patterns
+                "[id^='translation-container-ember'] > div > span > div > span",
+                # Alternative comment selectors for different layouts
+                ".comments-comment-item__main-content .break-words",
+                ".comments-comment-item__main-content",
+                ".feed-shared-update-v2__comments-container .break-words",
+                ".comments-comment-entity__text",
+                ".comments-comment-texteditor .break-words"
+            ]
+
+            comments_found = False
+            for selector in comment_selectors:
+                try:
+                    comment_elements = post_element.find_elements(By.CSS_SELECTOR, selector)
+                    for elem in comment_elements:
+                        comment_text = elem.text.strip()
+                        if comment_text and len(comment_text) > 10:  # Only consider substantial comments
+                            comment_data["comments"].append({
+                                "text": comment_text,
+                                "length": len(comment_text),
+                                "selector_used": selector
+                            })
+                            comments_found = True
+
+                    if comment_elements:
+                        comment_data["selectors_used"].append(selector)
+                        if comments_found:
+                            print(f"✅ Found {len(comment_elements)} comments using: {selector}")
+
+                except (NoSuchElementException, TimeoutException):
+                    continue
+
+            comment_data["comments_found"] = len(comment_data["comments"])
+
+            if not comments_found:
+                comment_data["errors"].append("No comments found with any selector")
+                print("📭 No existing comments found on this post")
+            else:
+                print(f"💬 Extracted {comment_data['comments_found']} existing comments")
+
+        except Exception as e:
+            comment_data["errors"].append(f"General comment extraction error: {str(e)}")
+            print(f"❌ Error extracting comments: {e}")
+
+        return comment_data
+
+    def analysis_previous_comment(self, comment_data):
+        """
+        Analyze existing comments using OpenAI LLM to understand conversation style and tone
+        """
+        if not comment_data or comment_data.get("comments_found", 0) == 0:
+            return {
+                "analysis_available": False,
+                "reason": "No existing comments found to analyze"
+            }
+
+        try:
+            from openai import OpenAI
+            import config
+
+            # Initialize OpenAI client
+            client = OpenAI(api_key=config.OPENAI_API_KEY)
+
+            # Prepare comments for analysis
+            comments_text = "\n\n".join([f"Comment {i+1}: {comment['text']}"
+                                       for i, comment in enumerate(comment_data["comments"][:5])])  # Analyze first 5 comments
+
+            # Use the analysis prompt from config.py
+            analysis_prompt = config.COMMENT_ANALYSIS_PROMPT.format(
+                comments_text=comments_text
+            )
+
+            # Generate analysis using OpenAI
+            response = client.chat.completions.create(
+                model="gpt-5",  # Using GPT-4 for better analysis
+                messages=[
+                    {"role": "user", "content": analysis_prompt}
+                ]
+            )
+
+            analysis_result = response.choices[0].message.content.strip()
+            print(f"✅ Comment analysis completed successfully")
+
+            return {
+                "analysis_available": True,
+                "comments_analyzed": len(comment_data["comments"]),
+                "analysis": analysis_result,
+                "analysis_timestamp": datetime.now().isoformat()
+            }
+
+        except Exception as e:
+            print(f"❌ Error analyzing comments: {e}")
+            return {
+                "analysis_available": False,
+                "reason": f"Analysis failed: {str(e)}"
+            }
+
+    def generate_comment_by_llm(self, post_content, author_name, comment_analysis=None):
+        """
+        Generate contextual comments using OpenAI LLM based on post content and existing comments analysis
         """
         try:
             from openai import OpenAI
@@ -450,19 +508,31 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
             # Initialize OpenAI client
             client = OpenAI(api_key=config.OPENAI_API_KEY)
 
-            # Use the prompt from config.py
-            prompt = config.COMMENT_PROMPT.format(
+            # Enhance the prompt with comment analysis if available
+            base_prompt = config.COMMENT_PROMPT.format(
                 author_name=author_name,
                 post_content=post_content if post_content else "No content available"
             )
 
+            # Add comment analysis context if available
+            if comment_analysis and comment_analysis.get("analysis_available"):
+                enhanced_prompt = f"""{base_prompt}
+
+ADDITIONAL CONTEXT - EXISTING COMMENTS ANALYSIS:
+The post already has {comment_analysis.get('comments_analyzed', 0)} existing comments. Here's an analysis of the conversation style:
+
+{comment_analysis.get('analysis', 'No detailed analysis available')}
+
+Please generate a comment that naturally fits this existing conversation style and tone, while maintaining Chris's authentic voice and perspective."""
+            else:
+                enhanced_prompt = base_prompt
+
             # Generate comment using OpenAI
             response = client.chat.completions.create(
-                model="gpt-5",  # Using cost-effective model
+                model="gpt-5",  # Using GPT-4 for better contextual understanding
                 messages=[
-                    {"role": "user", "content": prompt}
+                    {"role": "user", "content": enhanced_prompt}
                 ]
-            
             )
 
             generated_comment = response.choices[0].message.content.strip()
@@ -601,7 +671,7 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
                     self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", post_element)
                     time.sleep(config.SCROLL_DELAY)
 
-                    # Extract content
+                    # Extract content (this will expand "Read More" if needed)
                     content_data = self.extract_post_content(post_element, ember_id)
 
                     # Add author information to content data
@@ -651,10 +721,46 @@ class LinkedInComprehensiveScanner(LinkedInCommentBot):
                         time.sleep(config.COMMENT_DELAY_AFTER_EXTRACTION)
 
                         try:
-                            # Generate contextual comment using OpenAI LLM
+                            # First, open the comment section to reveal existing comments
+                            print(f"🔍 Opening comment section for post {ember_id}...")
+
+                            # Try to find and click the comment button to reveal comments
+                            comment_button_selectors = [
+                                "[id^='feed-shared-social-action-bar-comment-']",
+                                "button[aria-label*='comment' i]",
+                                ".feed-shared-social-action-bar__action-button[data-control-name*='comment']"
+                            ]
+
+                            comment_section_opened = False
+                            for selector in comment_button_selectors:
+                                try:
+                                    comment_button = post_element.find_element(By.CSS_SELECTOR, selector)
+                                    if comment_button.is_displayed():
+                                        # Scroll button into view and click
+                                        self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", comment_button)
+                                        time.sleep(0.5)
+                                        comment_button.click()
+                                        time.sleep(2)  # Wait for comments to load
+                                        comment_section_opened = True
+                                        print(f"✅ Opened comment section using: {selector}")
+                                        break
+                                except (NoSuchElementException, ElementClickInterceptedException):
+                                    continue
+
+                            if not comment_section_opened:
+                                print("⚠️ Could not open comment section - proceeding without comment analysis")
+
+                            # Extract existing comments for analysis (AFTER opening comment section)
+                            existing_comments = self.extract_comment_content(post_element, ember_id)
+
+                            # Analyze existing comments to understand conversation style
+                            comment_analysis = self.analysis_previous_comment(existing_comments)
+
+                            # Generate contextual comment using OpenAI LLM with comment analysis
                             comment_text = self.generate_comment_by_llm(
                                 content_data.get("content", ""),
-                                author_name
+                                author_name,
+                                comment_analysis
                             )
 
                             print(f"💭 Generated comment: {comment_text[:60]}...")
@@ -850,8 +956,6 @@ def main():
         # Save Stage 1 results to JSON
         scanner.save_results_to_json()
 
-        # Print comprehensive results
-        scanner.print_comprehensive_results()
 
         # ========== DUPLICATE CLEANUP ==========
         print(f"\n🧹 DUPLICATE CLEANUP")
